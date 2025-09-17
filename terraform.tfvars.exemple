@@ -1,0 +1,6 @@
+scw_access_key      = "SCW..."
+scw_secret_key      = "your-secret-key"
+scw_project_id      = "your-project-id"  
+scw_organization_id = "your-org-id"
+scw_region          = "fr-par"
+prefix              = "my-rotation"
