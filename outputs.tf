@@ -1,7 +1,3 @@
-# ====================================================================
-# outputs.tf (outputs étendus)
-# ====================================================================
-
 output "deployment_summary" {
   description = "Résumé du déploiement"
   value = {
@@ -44,12 +40,8 @@ output "important_notes" {
   value = <<-EOT
   
   
-  ✅ Fonctions créées:
-     - Rotation: https://${scaleway_function.rotation_function.domain_name}
-     - Récupération: https://${scaleway_function.retrieval_function.domain_name}
-  
+  ✅ Fonctions créées
   ⏰ Rotation automatique: ${var.enable_cron ? "Activée (${var.cron_schedule})" : "Désactivée"}
-  
   📝 Prochaines étapes:
      1. Testez la fonction de rotation manuellement 
         --> https://${scaleway_function.rotation_function.domain_name}
@@ -57,10 +49,6 @@ output "important_notes" {
      3. Testez la fonction de récupération
         --> https://${scaleway_function.retrieval_function.domain_name}
      4. Surveillez les logs des fonctions
-  
-  ⚠️  Important: 
-     - Les clés sont stockées dans le Secret Manager sous le nom 'iam-keys-generative-api'
-     - Vérifiez les permissions IAM si vous rencontrez des erreurs
   
   EOT
 }
